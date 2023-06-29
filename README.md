@@ -153,13 +153,13 @@ Of course you can! Logicboard just needs:
 3. Command to start REPL (optional)
 
 ### 1. Create a dockerfile
-Create a `<lang name>.dockerfile` inside [containers](https://github.com/logicboard/executor/tree/rename/containers)
+Create a `<lang name>.dockerfile` inside [containers](https://github.com/logicboard/executor/tree/main/containers)
 
 Make sure your docker image has `bash` installed during build step.
 
 We also need a user `app` with home directory `/home/app`
 
-### 2. Update [languages.ts](https://github.com/logicboard/executor/blob/rename/assets/src/utils/languages.ts)
+### 2. Update [languages.ts](https://github.com/logicboard/executor/blob/main/assets/src/utils/languages.ts)
 The `languages.ts` file used by the web app to display a list of lanugaues
 
 Update the `languages.ts` with a few details:
@@ -172,16 +172,16 @@ Update the `languages.ts` with a few details:
 - `message`: A placeholder message that will be displayed in the output area when your language is slected
 
 ### 3. Create your \<language\>.ex module
-The `<language>.ex` module in [languages](https://github.com/logicboard/executor/tree/rename/lib/logicboard/languages) directory is used by the bakend for code execution. We'll need the following:
+The `<language>.ex` module in [languages](https://github.com/logicboard/executor/tree/main/lib/logicboard/languages) directory is used by the bakend for code execution. We'll need the following:
 - `name`: The name of your language
 - `version` Language version
 - `container_image`: Ths function should return the image tag for your container. Use `<your docker file name>:executor`
 - `run_command`: The command used to execute code in your main file
 - `repl_command`: The command used to start REPL shell (or nil)
 
-Once done, you also need to update the [languages.ex](https://github.com/logicboard/executor/blob/rename/lib/logicboard/languages/languages.ex) module:
-- Add your language module to [alias](https://github.com/logicboard/executor/blob/rename/lib/logicboard/languages/languages.ex#L2)
-- Add entry to the [@modules](https://github.com/logicboard/executor/blob/rename/lib/logicboard/languages/languages.ex#L10) map, where the `code` is the language code you specified in section #2 above
+Once done, you also need to update the [languages.ex](https://github.com/logicboard/executor/blob/main/lib/logicboard/languages/languages.ex) module:
+- Add your language module to [alias](https://github.com/logicboard/executor/blob/main/lib/logicboard/languages/languages.ex#L2)
+- Add entry to the [@modules](https://github.com/logicboard/executor/blob/main/lib/logicboard/languages/languages.ex#L10) map, where the `code` is the language code you specified in section #2 above
 
 # Security Considerations
 Containers are not a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)), and aren't safe for running arbitrary code, so please be careful!

@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@codemirror/language": "^6.8.0",
+    "@uiw/codemirror-extensions-langs": "^4.21.3",
+    "@uiw/react-codemirror": "^4.21.3",
+    "ansicolor": "^1.1.100",
+    "codemirror-lang-elixir": "^3.0.1",
+    "local-echo": "github:chaitanyapandit/local-echo",
+    "nanoid": "^4.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7",
+    "xterm-addon-fit": "^0.3.0",
+    "xterm-for-react": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5"
+  }
+}

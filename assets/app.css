@@ -1,0 +1,50 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,350;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,300,400,500,600&display=swap');
+
+/* This file is for your main application CSS */
+
+/* Page */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Fira code', 'Fira Mono', Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.CodeMirror-focused {
+  border: none !important;
+  background-color: aqua !important;
+}
+
+a {
+  outline: none !important
+}
+
+.cm-editor.cm-focused {
+  outline: 0 !important
+}
+
+.xterm-selection-layer {
+  mix-blend-mode: exclusion!important;
+}
